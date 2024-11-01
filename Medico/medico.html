@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Médico</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Centro Médico Avanti</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Ver Horario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Buscar Paciente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Crear Nueva Ficha</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2>Bienvenido, Dr. [Nombre]</h2>
+
+    <!-- Sección del horario -->
+    <div class="card mb-4">
+      <div class="card-header">Horario de citas</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Paciente</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00 AM</td>
+              <td>Juan Pérez</td>
+              <td><a href="#" class="btn btn-primary btn-sm">Ver Ficha</a></td>
+            </tr>
+            <!-- Más citas -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sección de búsqueda de pacientes -->
+    <div class="card mb-4">
+      <div class="card-header">Buscar Paciente</div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="search" class="form-label">Rut del Paciente</label>
+            <input type="text" class="form-control" id="search" placeholder="Ingrese el rut del paciente">
+          </div>
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

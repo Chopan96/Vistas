@@ -1,0 +1,13 @@
+body{
+    background-color: blueviolet;
+}
+
+.container {
+    background-color: rgba(72, 131, 209, 0.534);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}

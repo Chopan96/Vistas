@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Avanti - Menú Principal Médico</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Centro Médico Avanti</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#ver-horario">Ver Horario de Atención</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ver-pacientes">Ver Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buscar-paciente">Buscar Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nuevo-paciente">Agregar Ficha de Nuevo Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ver-historial">Ver Historial Completo</a>
+                </li>
+            </ul>
+        </div>
+        <span class="navbar-text">
+            Bienvenido, Dr. [Nombre Médico]
+        </span>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Menú Principal - Médico</h2>
+    
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Ver Horario de Atención -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Ver Horario de Atención</h3>
+                        <p class="card-text">Aquí puede ver su horario de atención de citas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary w-100" href="">Ver Horario</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Ver Pacientes -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Ver Pacientes</h3>
+                        <p class="card-text">Acceda a la lista de todos sus pacientes.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary w-100" href="ficha.html">Ver Pacientes</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Buscar Paciente -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Buscar Paciente</h3>
+                        <p class="card-text">Busque un paciente para acceder a su historial clínico o agregar información de la consulta actual.</p>
+                        <form>
+                            <div class="form-group fondo-buscar">
+                                <label for="searchPaciente"><b>Nombre o ID del Paciente:</b></label>
+                                <input type="text" class="form-control" id="searchPaciente" placeholder="Ingrese nombre o ID">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <a type="submit" class="btn btn-primary w-100 mt-2">Buscar Paciente</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Agregar Ficha de Nuevo Paciente -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Agregar Ficha de Nuevo Paciente</h3>
+                        <p class="card-text">Registre una ficha clínica para un nuevo paciente.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-success w-100">Agregar Ficha Clínica</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Ver Historial Completo -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Ver Historial Completo de Atenciones Anteriores</h3>
+                        <p class="card-text">Revise todas las atenciones anteriores de un paciente.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-info w-100" href="historial.html">Ver Historial Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Centro Médico Avanti. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

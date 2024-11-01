@@ -1,0 +1,25 @@
+<section id="vender-bonos" class="mt-5">
+    <h3>Vender Bonos Médicos</h3>
+    <p>Ingrese el código de la cita agendada para vender un bono médico.</p>
+
+    <!-- Formulario para vender bonos -->
+    <form>
+        <div class="form-group">
+            <label for="codigoCita">Código de la Cita Agendada</label>
+            <input type="text" class="form-control" id="codigoCita" placeholder="Ingrese el código de la cita" required>
+        </div>
+        <div class="form-group">
+            <label for="montoBono">Monto del Bono</label>
+            <input type="number" class="form-control" id="montoBono" placeholder="Ingrese el monto del bono" required>
+        </div>
+        <button type="submit" class="btn btn-success">Vender Bono</button>
+    </form>
+
+    <!-- Bonos vendidos -->
+    <h4 class="mt-4">Historial de Bonos Vendidos</h4>
+    <ul class="list-group">
+        <li class="list-group-item">Cita ID: 1234 - Monto: $50.000</li>
+        <li class="list-group-item">Cita ID: 5678 - Monto: $30.000</li>
+        <!-- Se agregarían más bonos vendidos -->
+    </ul>
+</section>
