@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title: appointment.patient,
         start: `${appointment.date}T${appointment.time}`,
         end: `${appointment.date}T${endTime}`,
-        color: '#FFDD57',
+        color: '#FF851B',
         extendedProps: { 
           patient: appointment.patient,
           time: appointment.time

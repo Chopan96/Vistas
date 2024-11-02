@@ -4,6 +4,7 @@ nav{
 }
 
 .navbar{
+<<<<<<< HEAD
   left: 0;
   width: 100%;
 }
@@ -18,6 +19,14 @@ body {
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
+=======
+left: 0;
+width: 100%;
+
+}
+body{
+background-color: rgba(0, 0, 0, 0.103);
+>>>>>>> 5e97a055dfa81d6fbf37f0248e98d74bd95ee942
 }
 
 a{
@@ -26,6 +35,7 @@ a{
 
 a:hover {
   color: #ED6E0F; /* Color al pasar el cursor */
+<<<<<<< HEAD
   text-decoration: underline; /* Añadir subrayado opcional */
   }
 .navbar-brand{
@@ -36,6 +46,19 @@ a:hover {
 header{
   left: 0;
   width: 100%;
+=======
+  text-decoration: none; /* Añadir subrayado opcional */
+}
+.navbar-brand{
+  font-size: 25px;
+  color: #ED6E0F;
+}
+
+header{
+
+left: 0;
+width: 100%;
+>>>>>>> 5e97a055dfa81d6fbf37f0248e98d74bd95ee942
   background-color: #0545676e;
   padding: 2px;
   text-align: center;
@@ -58,14 +81,37 @@ header{
 .custom-btn-blue:hover {
   background-color: #0056b3; /* Color azul oscuro al hacer hover */
 }
+<<<<<<< HEAD
   
   /* Botón naranja personalizado */
+=======
+
+/* Botón naranja personalizado */
+>>>>>>> 5e97a055dfa81d6fbf37f0248e98d74bd95ee942
 .custom-btn-orange {
   background-color: #FF851B; /* Color naranja */
   color: white;
 }
 .custom-btn-orange:hover {
   background-color: #e07b18; /* Color naranja más oscuro al hacer hover */
+<<<<<<< HEAD
+=======
+}
+
+/* Botón verde personalizado */
+.custom-btn-green {
+  background-color: #28A745; /* Color verde */
+  color: white;
+}
+.custom-btn-green:hover {
+  background-color: #218838; /* Color verde más oscuro al hacer hover */
+}
+
+#logo{
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+>>>>>>> 5e97a055dfa81d6fbf37f0248e98d74bd95ee942
 }
 
 #logo{
@@ -85,16 +131,28 @@ header{
   text-align: center;
   
 }
-.col{
-  padding: 10px 1px 10px 2px;
-  border: white solid;
-  border-radius: 8px;
-  background-color: rgba(95, 158, 160, 0.466);
+
+.card-img-top{
+padding: 8px;
 }
-.fondo-buscar{
-  background-color: #ed6f0f46;
-  padding: 10px;
-  border-radius: 8px;
+
+.card{
+background-color:  rgba(95, 158, 160, 0.39);
+margin: 8px;
+display: flex;
+flex-direction: column;
+}
+.card-body {
+flex-grow: 1; /* El contenido ocupa el espacio restante */
+}
+
+.card-footer {
+display: flex;
+justify-content: flex-end;
+}
+
+.btn-info{
+justify-content:flex-end end;
 }
 
 #overlay {
