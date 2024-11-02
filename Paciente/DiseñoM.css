@@ -1,16 +1,61 @@
 /* Estilo general */
-body {
+
+
+    
+
+body, html {
+    background-color: azure(0, 0, 255, 0.712);
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Estilos del modal de pantalla completa */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('imagenes/Fondo.png'); /* Fondo borroso */
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(5px); /* Efecto borroso */
+}
+
+/* Contenido del calendario dentro del modal */
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Contenedor del calendario */
+#calendar {
+    height: 100%;
+    width: 100%;
+}
+
+/* Botón de cierre del modal */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .container {

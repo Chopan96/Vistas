@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un Médico</title>
-    <link href="DiseñoM.css" rel="stylesheet"> <!-- Vincula el archivo CSS -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/main.min.css' />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/es.js"></script>
+    <link href="DiseñoM.css" rel="stylesheet">
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Seleccione un Médico</h1>
+<!-- Contenedor principal -->
+<div class="container">
+    <h1>Seleccione un Médico</h1>
+    <ul>
+        <li>Médico 1 <button onclick="abrirModal()">Ver Horario</button></li>
+        <li>Médico 2 <button onclick="abrirModal()">Ver Horario</button></li>
+        <li>Médico 3 <button onclick="abrirModal()">Ver Horario</button></li>
+    </ul>
+</div>
 
-        <ul>
-            <li>Médico 1 <button class="agendarBtn">Agendar</button></li>
-            <li>Médico 2 <button class="agendarBtn">Agendar</button></li>
-            <li>Médico 3 <button class="agendarBtn">Agendar</button></li>
-        </ul>
-
-        <div id="calendario" style="display: none;">
-            <h2>Seleccione una fecha</h2>
-            <form id="calendarioForm">
-                <input type="date" name="fecha" required><br><br>
-                <input type="submit" value="Confirmar">
-            </form>
-        </div>
+<!-- Modal de pantalla completa para el calendario -->
+<div class="modal" id="modalCalendario">
+    <div class="modal-content">
+        <button class="close-btn" onclick="cerrarModal()">Cerrar</button>
+        <div id="calendar"></div>
     </div>
+</div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="Main.js"></script> <!-- Vincula el archivo JS -->
+    <script src="funciones.js"></script>
 </body>
 </html>
+
