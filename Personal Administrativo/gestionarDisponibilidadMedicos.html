@@ -1,29 +1,90 @@
-<section id="gestionar-medicos" class="mt-5">
-    <h3>Gestionar Disponibilidad de Médicos</h3>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Avanti - Menú Principal Administrativo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">Centro Médico Avanti</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="gestionarPacientes.html">Gestionar Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestionarDisponibilidadMedicos.html">Gestionar Disponibilidad de Médicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="horariosMedicos.html">Ver Horarios de Médicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="venderBonos.html">Vender Bonos Médicos</a>
+                </li>
+            </ul>
+        </div>
 
-    <!-- Formulario para asignar disponibilidad -->
-    <h4>Asignar Horarios de Atención</h4>
-    <form>
-        <div class="form-group">
-            <label for="nombreMedico">Nombre del Médico</label>
-            <input type="text" class="form-control" id="nombreMedico" placeholder="Nombre del Médico" required>
-        </div>
-        <div class="form-group">
-            <label for="especialidad">Especialidad</label>
-            <input type="text" class="form-control" id="especialidad" placeholder="Especialidad" required>
-        </div>
-        <div class="form-group">
-            <label for="horarioAtencion">Horario de Atención</label>
-            <input type="text" class="form-control" id="horarioAtencion" placeholder="Ej: Lunes a Viernes, 9:00-12:00" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Asignar Horario</button>
-    </form>
+    </nav>
 
-    <!-- Lista de médicos con horarios asignados -->
-    <h4 class="mt-4">Médicos y sus Horarios</h4>
-    <ul class="list-group">
-        <li class="list-group-item">Dr. Juan Pérez - Cardiología - Lunes a Viernes, 9:00-12:00</li>
-        <li class="list-group-item">Dra. Ana Gómez - Dermatología - Martes y Jueves, 14:00-18:00</li>
-        <!-- Se agregarían más médicos -->
-    </ul>
-</section>
+    <div class="container mt-5">
+        <h2>Menú Principal - Personal Administrativo</h2>
+        <section id="gestionar-medicos" class="mt-5"></section>
+            <div class="col contenedor">     
+                <h3>Gestionar Disponibilidad de Médicos</h3>
+
+                <!-- Formulario para asignar disponibilidad -->
+                <h4>Asignar Horarios de Atención</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="nombreMedico">Nombre del Médico</label>
+                        <input type="text" class="form-control" id="nombreMedico" placeholder="Nombre del Médico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" class="form-control" id="especialidad" placeholder="Especialidad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horarioAtencion">Horario de Atención</label>
+                        <input type="text" class="form-control" id="horarioAtencion" placeholder="Ej: Lunes a Viernes, 9:00-12:00" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Asignar Horario</button>
+                </form>
+            </div>
+            <div class="col contenedor">
+                <!-- Lista de médicos con horarios asignados -->
+                <h4 class="mt-4">Médicos y sus Horarios</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Dr. Juan Pérez - Cardiología - Lunes a Viernes, 9:00-12:00</li>
+                    <li class="list-group-item">Dra. Ana Gómez - Dermatología - Martes y Jueves, 14:00-18:00</li>
+                    <!-- Se agregarían más médicos -->
+                </ul>
+            </div>
+        </section>
+
+
+</div>
+
+<footer class="footer">
+    <div class="container mt-2">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-4 text-center text-md-left">
+        </div>
+        <div class="col-md-4 text-center">
+            <p>Centro Médico Avanti® 2024</p>
+        </div>
+        <div class="col-md-4 text-center text-md-right">
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

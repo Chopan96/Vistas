@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Médico Avanti - Menú Principal Administrativo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="estilo.css"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="#">Centro Médico Avanti</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,56 +37,77 @@
     <div class="container mt-5">
         <h2>Menú Principal - Personal Administrativo</h2>
 
-        <!-- Gestionar Pacientes -->
-        <section id="gestionar-pacientes" class="mt-5">
-            <h3>Registrar y Gestionar Pacientes</h3>
-            <p>Aquí puede registrar nuevos pacientes y gestionar los datos personales de los pacientes existentes.</p>
-            <a class="btn btn-primary" href="gestionarPacientes.html">Gestionar Pacientes</a>
-        </section>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Registrar Pacientes -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Registrar y Gestionar Pacientes</h3>
+                        <p class="card-text">Aquí puede registrar nuevos pacientes y gestionar los datos personales de los pacientes existentes.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary w-100" href="gestionarPacientes.html">Gestionar Pacientes</a>
+                    </div>
+                </div>
+            </div>
+
 
         <!-- Gestionar Disponibilidad de Médicos -->
-        <section id="gestionar-medicos" class="mt-5">
-            <h3>Gestionar Disponibilidad de Médicos</h3>
-            <p>Gestione la disponibilidad de los médicos en el sistema, incluyendo la asignación de horarios y días de atención.</p>
-            <a class="btn btn-primary" href="gestionarDisponibilidadMedicos.html">Gestionar Médicos</a>
-        </section>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Gestionar Disponibilidad de Médicos</h3>
+                    <p class="card-text">Gestione la disponibilidad de los médicos en el sistema, incluyendo la asignación de horarios y días de atención.</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary w-100" href="gestionarDisponibilidadMedicos.html">Gestionar Médicos</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Ver Horarios de Médicos -->
-        <section id="ver-horarios-medicos" class="mt-5">
-            <h3>Ver Horarios de Todos los Médicos</h3>
-            <p>Consulte los horarios de atención de todos los médicos.</p>
-            <a class="btn btn-info" href="horariosMedicos.html">Ver Horarios</a>
-        </section>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Ver Horarios de Todos los Médicos</h3>
+                    <p>Consulte los horarios de atención de todos los médicos.</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary w-100" href="horariosMedicos.html">Ver Horarios</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Vender Bonos Médicos -->
-        <section id="vender-bonos" class="mt-5">
-            <h3>Vender Bonos Médicos</h3>
-            <p>Realice la venta de bonos médicos a los pacientes para sus atenciones.</p>
-            <a class="btn btn-success" href="venderBonos.html">Vender Bonos</a>
-        </section>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Vender Bonos Médicos</h3>
+                    <p>Realice la venta de bonos médicos a los pacientes para sus atenciones.</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary w-100" href="venderBonos.html">Vender Bonos</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <footer class="footer">
         <div class="container mt-2">
           <div class="row justify-content-between align-items-center">
             <div class="col-md-4 text-center text-md-left">
-              
-              <a href="mailto:info@centroavanti.cl" class="d-block">✉️ info@centroavanti.cl</a>
             </div>
             <div class="col-md-4 text-center">
-              <p class="mb-0">⏰ Horarios: Lunes a Viernes de 08:30 a 20:00 hrs</p>
-              <p class="mb-0">Sábado de 09:00 a 13:00 hrs</p>
+                <p>Centro Médico Avanti® 2024</p>
             </div>
             <div class="col-md-4 text-center text-md-right">
-              <a href="https://wa.me/56911111111" class="d-block">💬 Whatsapp: +569 1111 1111</a>
             </div>
           </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
