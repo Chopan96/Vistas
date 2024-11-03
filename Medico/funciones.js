@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
       slotDuration: '00:20:00',
       slotLabelInterval: { minutes: 20 },
       selectable: true,
+      allDaySlot: false,
+      height: 'auto', // Define una altura automática
+  contentHeight: 600, // Ajusta esta altura según tus necesidades
+      buttonText: {
+        today: 'Hoy' // Cambia "Today" a "Hoy"
+      },
       events: events,
       eventOverlap: false,
       slotLabelFormat: {
