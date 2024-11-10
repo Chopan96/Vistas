@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Avanti</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magia.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="principal.html"><img src="imagenes/circular_logo.png" id="logo">Centro Médico Avanti</a>
+    </nav>
+
+    <div class="container">
+        <h1>Agregar Ficha de Nuevo Paciente</h1>
+        <form id="pacienteForm">
+            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+            <input type="date" id="fechaNacimiento" required>
+            <input type="email" id="correo" placeholder="Correo Electrónico" required>
+            <textarea id="motivoConsulta" placeholder="Motivo de Consulta"></textarea>
+            <textarea id="historialMedico" placeholder="Historial Médico (alergias o enfermedades previas)"></textarea>
+            <textarea id="medicamentosActuales" placeholder="Medicamentos Actuales"></textarea>
+            <textarea id="medicamentosPrevios" placeholder="Medicamentos Previos"></textarea>
+            <button type="submit">Agregar Paciente</button>
+        </form>
+
+        <h2>Lista de Pacientes</h2>
+        <table id="pacientesTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Correo</th>
+                    <th>Motivo de Consulta</th>
+                    <th>Historial Médico</th>
+                    <th>Medicamentos Actuales</th>
+                    <th>Medicamentos Previos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script src="js/script.js"></script>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="container mt-2">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-md-4 text-center text-md-left">
+            </div>
+            <div class="col-md-4 text-center">
+                <p>Centro Médico Avanti® 2024</p>
+            </div>
+            <div class="col-md-4 text-center text-md-right">
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
