@@ -3,104 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Médico Avanti - Menú Principal Administrativo</title>
+    <title>Centro Médico Avanti - Administración Horarios Médicos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilo.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/main.min.css" />
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">Centro Médico Avanti</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="gestionarPacientes.html">Gestionar Pacientes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gestionarDisponibilidadMedicos.html">Gestionar Disponibilidad de Médicos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="horariosMedicos.html">Ver Horarios de Médicos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="venderBonos.html">Vender Bonos Médicos</a>
-                </li>
-            </ul>
-        </div>
-        <span class="navbar-text">
-            Bienvenido, [Nombre Administrativo]
-        </span>
-    </nav>
 
-    <div class="contenedor">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="imagenes/circular_logo.png" id="logo">Centro Médico Avanti</a>
+</nav>
+
+<div class="container mt-5">
+    <div class="lista">
+    <h2>Ver Horarios de Médicos</h2>
+    <ul id="medicos-lista">
+        <li>
+            <h3>Dr. Juan Pérez</h3>
+            <button class="btn btn-link" onclick="mostrarHorario('medico1')">Ver Más</button>
+        </li>
         
-        <div class="formulario">
-            <h2>Registrar Disponibilidad del Médico</h2>
-        <form onsubmit="return validarRUT()">
-            <!-- Campo de RUT -->
-            <div class="mb-3">
-                <label for="rutMedico" class="form-label">RUT del Médico</label>
-                <input type="text" class="form-control" id="rutMedico" placeholder="Ej: 12345678-9" required>
-                <div class="invalid-feedback">Ingrese un RUT válido (formato: 12345678-9).</div>
-            </div>
-    
-            <!-- Selección de Días -->
-            <div class="mb-3">
-                <label class="form-label">Días de la Semana</label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="lunes" value="Lunes">
-                    <label class="form-check-label" for="lunes">Lunes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="martes" value="Martes">
-                    <label class="form-check-label" for="martes">Martes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="miercoles" value="Miércoles">
-                    <label class="form-check-label" for="miercoles">Miércoles</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="jueves" value="Jueves">
-                    <label class="form-check-label" for="jueves">Jueves</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="viernes" value="Viernes">
-                    <label class="form-check-label" for="viernes">Viernes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="sabado" value="Sábado">
-                    <label class="form-check-label" for="sabado">Sábado</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="domingo" value="Domingo">
-                    <label class="form-check-label" for="domingo">Domingo</label>
-                </div>
-            </div>
-            <!-- Horario de Inicio y Fin -->
-            <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                    <label for="horaInicio" class="form-label">Hora de Inicio</label>
-                    <input type="time" class="form-control" id="horaInicio" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="horaFin" class="form-label">Hora de Fin</label>
-                    <input type="time" class="form-control" id="horaFin" required>
-                </div>
-            </div>
-
-            <!-- Botón para Enviar -->
-            <button type="submit" class="btn btn-primary">Guardar Disponibilidad</button>
-        </form>
-    </div>
-    <footer class="footer mt-auto">
-
-                <p>Centro Médico Avanti® 2024</p>
-
-    </footer>
+        <li>
+            <h3>Dra. María González</h3>
+            <button class="btn btn-link" onclick="mostrarHorario('medico2')">Ver Más</button>
+        </li>
+        <!-- Agrega más médicos si es necesario -->
+    </ul>
 </div>
+
+<!-- Modal para mostrar el horario del médico -->
+<div id="modal-horario" style="display: none;">
+    <div id="overlay"></div>
+    <div id="modal">
+        <h3 id="nombre-medico"></h3>
+        <div id="calendar"></div>
+        <button class="btn btn-secondary mt-3" onclick="cerrarModal()">Cerrar</button>
+    </div>
+</div>
+</div>
+<footer class="footer">
+    <div class="container mt-2 text-center">
+        <p>Centro Médico Avanti® 2024</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <script src="variables.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
