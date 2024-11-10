@@ -3,15 +3,13 @@ nav{
   background-color: #054567e3;
 }
 
+
 .navbar{
   left: 0;
   width: 100%;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+
   background-color: rgba(0, 0, 0, 0.103);
 }
 .btn{
@@ -20,8 +18,8 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
 
-left: 0;
-width: 100%;
+  left: 0;
+  width: 100%;
 
 }
 
@@ -87,29 +85,28 @@ header{
   width: 80px;
   margin-right: 10px;
 }
-
+.formulario{
+  padding: 25px;
+}
 .footer {
-  position: static ;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
+  position: fixed;
   background-color: #054567;
   color: white;
-  padding: 10px;
   text-align: center;
-  margin-top: 10px;
-  width: 100%;
+  width: 100vw; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+  padding: 10px;
+  margin-top: auto; /* Empuja el footer al final de la página */
 }
 
 .contenedor{
-  background-color:  rgba(95, 158, 160, 0.39);
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+
+  justify-content: space-between; /* Elementos separados horizontalmente */
+  align-items: flex-start; /* Alinea al inicio de la columna */
+  gap: 2%; /* Gap entre elementos como porcentaje */
+  flex-direction: row; /* Elementos en fila */
+
+  background-color: #f0f0f073;
 }
 
 .card-img-top{
