@@ -1,6 +1,6 @@
 nav{
   font-family: 'Times New Roman', Times, serif, Geneva, Tahoma, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #054567e3;
+  background-color: #054567;
 }
 
 .navbar{
@@ -15,6 +15,12 @@ body {
 }
 .container{
   flex:1;
+}
+.contenedor{
+  background-color: rgb(95, 158, 160);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
 }
 
 .btn{
@@ -32,7 +38,8 @@ width: 100%;
   background-color: #ED6E0F;
 }
 body{
-background-color: rgba(0, 0, 0, 0.103);
+  background-image: url("../imagenes/background.png");
+  background-color: rgb(0, 0, 0);
 
 }
 
@@ -56,7 +63,7 @@ a:hover {
 header{
   left: 0;
   width: 100%;
-  background-color: #0545676e;
+  background-color: #054567;
   padding: 2px;
   text-align: center;
   color: white;
@@ -72,7 +79,7 @@ header{
 
 /* Botón azul personalizado */
 .custom-btn-blue {
-  background-color: #043c77da; /* Color azul */
+  background-color: #043c77; /* Color azul */
   color: white;
 }
 .custom-btn-blue:hover {
@@ -111,7 +118,7 @@ padding: 8px;
 }
 
 .card{
-background-color:  rgba(95, 158, 160, 0.39);
+background-color:  rgb(95, 158, 160);
 margin: 8px;
 display: flex;
 flex-direction: column;
@@ -155,10 +162,13 @@ justify-content:flex-end end;
 }
 
 .calendario{
-  background-color: rgba(0, 0, 0, 0.089);
+  background-color: #94bbbd;
+  border-radius: 8px;
   margin-bottom: 5%;
 }
 
 .col{
   margin-bottom: 10px;
 }
+
+/*Oh*/
