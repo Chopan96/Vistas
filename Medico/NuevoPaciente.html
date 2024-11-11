@@ -5,44 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Médico Avanti</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magia.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="principal.html"><img src="imagenes/circular_logo.png" id="logo">Centro Médico Avanti</a>
     </nav>
+    <div class="container mt-5">
+        <h2>Generar Ficha Técnica Médica</h2>
 
-    <div class="container">
-        <h1>Agregar Ficha de Nuevo Paciente</h1>
-        <form id="pacienteForm">
-            <input type="text" id="nombre" placeholder="Nombre Completo" required>
-            <input type="date" id="fechaNacimiento" required>
-            <input type="email" id="correo" placeholder="Correo Electrónico" required>
-            <textarea id="motivoConsulta" placeholder="Motivo de Consulta"></textarea>
-            <textarea id="historialMedico" placeholder="Historial Médico (alergias o enfermedades previas)"></textarea>
-            <textarea id="medicamentosActuales" placeholder="Medicamentos Actuales"></textarea>
-            <textarea id="medicamentosPrevios" placeholder="Medicamentos Previos"></textarea>
-            <button type="submit">Agregar Paciente</button>
+        <!-- Formulario para ingresar el RUT del paciente y detalles médicos -->
+        <form id="generarFichaForm">
+            <div class="mb-3">
+                <label for="rut" class="form-label">RUT del Paciente</label>
+                <input type="text" class="form-control" id="rut" placeholder="Ingrese el RUT del paciente" required>
+            </div>
+
+            <!-- Datos médicos que el médico debe completar -->
+            <h3>Información Médica Inicial</h3>
+
+            <div class="mb-3">
+                <label for="motivoConsulta" class="form-label">Motivo de la Consulta</label>
+                <input type="text" class="form-control" id="motivoConsulta" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="diagnosticoInicial" class="form-label">Diagnóstico Inicial</label>
+                <textarea class="form-control" id="diagnosticoInicial" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="tratamientoInicial" class="form-label">Tratamiento o Prescripción</label>
+                <textarea class="form-control" id="tratamientoInicial" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="observaciones" class="form-label">Observaciones Adicionales</label>
+                <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            </div>
+
+            <!-- Botón para guardar la ficha médica -->
+            <button type="submit" class="btn btn-success">Generar Ficha Médica</button>
         </form>
-
-        <h2>Lista de Pacientes</h2>
-        <table id="pacientesTable">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Correo</th>
-                    <th>Motivo de Consulta</th>
-                    <th>Historial Médico</th>
-                    <th>Medicamentos Actuales</th>
-                    <th>Medicamentos Previos</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <script src="js/script.js"></script>
-            </tbody>
-        </table>
     </div>
 
     <footer class="footer">
