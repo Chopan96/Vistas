@@ -13,7 +13,6 @@ function cerrarModal() {
     document.getElementById("confirmacionCita").style.display = "none";
 }
 
-// Inicializar FullCalendar dentro del modal
 function inicializarCalendario() {
     var calendarEl = document.getElementById('calendar');
 
@@ -54,9 +53,9 @@ function inicializarCalendario() {
             return !event; // No permite seleccionar fechas que ya están reservadas
         },
         headerToolbar: {
-            left: 'prev,next today',
+            left: 'prev,next',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            right: '' // Elimina los botones de mes, semana, año
         },
         eventClick: function(info) {
             const citaSeleccionada = `Cita seleccionada: ${info.event.title} a las ${info.event.start.toLocaleTimeString()}`;
