@@ -137,3 +137,8 @@ justify-content:flex-end end;
 .col{
   margin-bottom: 10px;
 }
+.calendario{
+  background-color: #94bbbd;
+  border-radius: 8px;
+  margin-bottom: 5%;
+}
