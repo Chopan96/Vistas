@@ -90,3 +90,4 @@ function confirmarCita() {
 function cerrarModalExito() {
     document.getElementById('modalExito').style.display = 'none';
 }
+

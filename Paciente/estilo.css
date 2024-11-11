@@ -14,6 +14,12 @@ body{
   background-color: rgba(0, 0, 0, 0.103);
 }
 
+#logo{
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+}
+
 input[type="text"], select {
   width: 100%;
   padding: 10px;
@@ -48,6 +54,18 @@ a:hover {
 .navbar-brand{
     font-size: 25px;
     color: #ED6E0F !important
+}
+
+
+.btn{
+  background-color: #ED6E0F;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  left: 0;
+  width: 100%;
+
 }
 
 header{
@@ -104,16 +122,16 @@ header{
 
 }
 
-.footer{
-    position: static;
-    background-color: #054567e3;
-    color: white;
-    padding: 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    
+.footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #054567;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
 }
 
 .card-img-top{

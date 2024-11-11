@@ -35,8 +35,8 @@
 
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="card p-4">
-      <h2 class="text-center mb-4">Login</h2>
-      <form method="POST">
+      <h2 class="text-center mb-4">Login - Paciente</h2>
+      <form onsubmit="return validarLoginP()">
         <div class="mb-3">
           <label for="username" class="form-label">Mail</label>
           <input type="text" class="form-control" id="username" placeholder="Ingresa Mail">
@@ -45,7 +45,9 @@
           <label for="password" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
         </div>
-        <a href="Main.html" class="btn btn-primary">Acceder</a>
+        
+        <p id="error-message" class="text-danger d-none">Correo o contraseña incorrectos. Por favor, intenta de nuevo.</p>
+        <button type="submit" class="btn btn-primary">Acceder</button>
       </form>
     </div>
   </div>
@@ -67,6 +69,6 @@
       </div>
     </div>
 </footer>
-
+<script src="loginpaciente.js"></script>
 </body>
 </html>
