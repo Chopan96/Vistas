@@ -18,15 +18,4 @@ body{
     align-items: center;
 }
 
-.fc-close-btn {
-    background-color: #ff4d4d; /* Color rojo para el botón de cerrar */
-    color: white;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.fc-close-btn:hover {
-    background-color: #e60000;
-}

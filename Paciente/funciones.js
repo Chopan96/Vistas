@@ -26,27 +26,34 @@ function inicializarCalendario() {
         slotMinTime: '09:00',
         slotMaxTime: '17:00',
         slotDuration: '00:20:00',
+        slotLabelInterval: { minutes: 20 },
         selectable: true,
         allDaySlot: false,
+        slotLabelFormat: {
+            hour: '2-digit', 
+            minute: '2-digit', 
+            omitZeroMinute: false, 
+            meridiem: false // Muestra las horas en formato 24 horas
+        },
         contentHeight: 600,
         events: [
             {
                 id: 1,
                 title: 'Cita 1',
-                start: '2024-11-04T09:00:00',
-                end: '2024-11-04T09:20:00'
+                start: '2024-11-11T09:00:00',
+                end: '2024-11-11T09:20:00'
             },
             {
                 id: 2,
                 title: 'Cita 2',
-                start: '2024-11-04T09:20:00',
-                end: '2024-11-04T09:40:00'
+                start: '2024-11-11T09:20:00',
+                end: '2024-11-11T09:40:00'
             },
             {
                 id: 3,
                 title: 'Cita 3',
-                start: '2024-11-04T10:00:00',
-                end: '2024-11-04T10:20:00'
+                start: '2024-11-11T10:00:00',
+                end: '2024-11-11T10:20:00'
             }
         ],
         selectOverlap: function(event) {
@@ -69,24 +76,25 @@ function inicializarCalendario() {
     calendar.render();
 }
 
-function confirmarCita() {
-    // Agregar el evento al calendario
-    calendar.addEvent({
-        title: 'Cita Agendada',
-        start: window.fechaCita,
-        end: new Date(new Date(window.fechaCita).getTime() + 20 * 60000), // Duración de 20 minutos
-        color: 'green' // Cambia el color para indicar que está confirmado
-    });
+function confirmarCita(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
 
-    // Muestra el mensaje en el modal de éxito
-    var mensajeExito = document.getElementById('mensajeExito');
-    mensajeExito.textContent = "Cita agendada con éxito para " + window.fechaCita;
+    // Obtener los valores del formulario
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const correo = document.getElementById('correo').value;
 
-    // Abre el modal de éxito
-    document.getElementById('modalExito').style.display = 'flex';
-
-    cerrarModal(); // Cierra el modal del calendario
+    // Aquí podrías hacer una llamada a tu backend para guardar la cita
+    const mensajeExito = `Cita confirmada para el ${window.fechaCita} con el paciente ${nombre} (${telefono}, ${correo}).`;
+    
+    // Mostrar mensaje de éxito
+    document.getElementById('mensajeExito').textContent = mensajeExito;
+    document.getElementById('modalExito').style.display = 'block';
+    document.getElementById('modalCalendario').style.display = 'none';
 }
+
 function cerrarModalExito() {
+    // Cerrar el modal de éxito
     document.getElementById('modalExito').style.display = 'none';
+    window.location.href = 'Main.html';
 }

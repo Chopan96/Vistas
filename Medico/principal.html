@@ -67,25 +67,6 @@
                 </div>
             </div>
 
-            <!-- Buscar Paciente -->
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title">Buscar Paciente</h3>
-                        <p class="card-text">Busque un paciente para acceder a su historial clínico o agregar información de la consulta actual.</p>
-                        <form onsubmit="return false;">
-                            <div class="form-group fondo-buscar">
-                                <label for="searchPaciente"><b>Nombre o ID del Paciente:</b></label>
-                                <input type="text" class="form-control" id="searchPaciente" placeholder="Ingrese nombre o ID">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-primary w-100 mt-2" id="searchBtn" data-toggle="modal" data-target="#patientModal">Buscar Paciente</button>
-                    </div>
-                </div>
-            </div>
-
             <!-- Agregar Ficha de Nuevo Paciente -->
             <div class="col">
                 <div class="card h-100">
@@ -99,48 +80,11 @@
                 </div>
             </div>
 
-            <!-- Ver Historial Completo -->
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title">Ver Historial Completo de Atenciones Anteriores</h3>
-                        <p class="card-text">Revise todas las atenciones anteriores de un paciente.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a class="btn btn-info w-100" href="historial.html">Ver Historial Completo</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
-    <!-- Modal para mostrar el historial del paciente -->
-    <div class="modal fade" id="patientModal" tabindex="-1" aria-labelledby="patientModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="patientModalLabel">Historial del Paciente</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="patientHistoryContainer">
-                        <p id="patientHistory">Cargando historial del paciente...</p>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3" id="addConsultBtn">Agregar Información de Consulta</button>
-                    <div id="consultForm" class="mt-3" style="display: none;">
-                        <label for="consultInfo"><b>Información de la Consulta:</b></label>
-                        <textarea class="form-control" id="consultInfo" rows="3" placeholder="Ingrese detalles de la consulta actual"></textarea>
-                        <button type="button" class="btn btn-success mt-2" id="saveConsultBtn">Guardar Información</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <footer class="footer">
         <div class="container mt-2">
